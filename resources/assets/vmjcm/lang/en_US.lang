@@ -1,0 +1,9 @@
+# ITEMS
+item.ram.name= DDR RAM (512M)
+item.cpu.name= Central Processing Unit (CPU) Tier 1
+
+# BLOCKS
+tile.case1.name= Tier 1 Case (ATX)
+
+#TITLE
+itemGroup.vmjcm= VMJ's Computer Mod

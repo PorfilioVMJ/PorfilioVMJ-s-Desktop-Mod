@@ -1,0 +1,355 @@
+﻿{
+	"credit": "Made with Blockbench, a free, modern block model editor by JannisX11",
+	"ambientocclusion": false,
+	"textures": {
+		"0": "vmjcm:blocks/blackwool",
+		"1": "vmjcm:blocks/iron",
+		"2": "vmjcm:blocks/obsidian",
+		"particle": "vmjcm:blocks/blackwool"
+	},
+	"elements": [
+		{
+			"name": "Antenna 4",
+			"from": [13.38, 7.4, 11.7],
+			"to": [14.38, 15.4, 12.7],
+			"faces": {
+				"north": {"uv": [0, 0, 1, 8], "texture": "#2"},
+				"east": {"uv": [0, 0, 1, 8], "texture": "#2"},
+				"south": {"uv": [0, 0, 1, 8], "texture": "#2"},
+				"west": {"uv": [0, 0, 1, 8], "texture": "#2"},
+				"up": {"uv": [0, 0, 1, 1.5], "texture": "#2"},
+				"down": {"uv": [0, 0, 1, 8], "texture": "#2"}
+			},
+			"rotation": {
+				"origin": [9.38, 10.4, 8],
+				"axis": "z",
+				"angle": -22.5
+			},
+			"type": "cube"
+		},
+		{
+			"name": "AntennaBase 4",
+			"from": [13, 6.5, 11.7],
+			"to": [14, 7.5, 12.7],
+			"faces": {
+				"north": {
+					"uv": [0, 0, 15.97109375, 15.97109375],
+					"texture": "#1"
+				},
+				"east": {
+					"uv": [0, 0, 15.97109375, 15.97109375],
+					"texture": "#1"
+				},
+				"south": {
+					"uv": [0, 0, 15.97109375, 15.97109375],
+					"texture": "#1"
+				},
+				"west": {
+					"uv": [0, 0, 15.97109375, 15.97109375],
+					"texture": "#1"
+				},
+				"up": {
+					"uv": [0, 0, 15.97109375, 15.97109375],
+					"texture": "#1"
+				},
+				"down": {
+					"uv": [0, 0, 15.97109375, 15.97109375],
+					"texture": "#1"
+				}
+			},
+			"rotation": {
+				"origin": [9, 9.5, 8],
+				"axis": "z",
+				"angle": -22.5
+			},
+			"type": "cube"
+		},
+		{
+			"name": "Antenna 3",
+			"from": [9, 6, 11.7],
+			"to": [10, 14, 12.7],
+			"faces": {
+				"north": {"uv": [0, 0, 1, 8], "texture": "#2"},
+				"east": {"uv": [0, 0, 1, 8], "texture": "#2"},
+				"south": {"uv": [0, 0, 1, 8], "texture": "#2"},
+				"west": {"uv": [0, 0, 1, 8], "texture": "#2"},
+				"up": {"uv": [0, 0, 1, 1], "texture": "#2"},
+				"down": {"uv": [0, 0, 1, 8], "texture": "#2"}
+			},
+			"type": "cube"
+		},
+		{
+			"name": "AntennaBase 3",
+			"from": [9, 5, 11.7],
+			"to": [10, 6, 12.7],
+			"faces": {
+				"north": {
+					"uv": [0, 0, 15.97109375, 15.97109375],
+					"texture": "#1"
+				},
+				"east": {
+					"uv": [0, 0, 15.97109375, 15.97109375],
+					"texture": "#1"
+				},
+				"south": {
+					"uv": [0, 0, 15.97109375, 15.97109375],
+					"texture": "#1"
+				},
+				"west": {
+					"uv": [0, 0, 15.97109375, 15.97109375],
+					"texture": "#1"
+				},
+				"up": {
+					"uv": [0, 0, 15.97109375, 15.97109375],
+					"texture": "#1"
+				},
+				"down": {
+					"uv": [0, 0, 15.97109375, 15.97109375],
+					"texture": "#1"
+				}
+			},
+			"type": "cube"
+		},
+		{
+			"name": "Antenna 2",
+			"from": [6, 6, 11.7],
+			"to": [7, 14, 12.7],
+			"faces": {
+				"north": {"uv": [0, 0, 1, 8], "texture": "#2"},
+				"east": {"uv": [0, 0, 1, 8], "texture": "#2"},
+				"south": {"uv": [0, 0, 1, 8], "texture": "#2"},
+				"west": {"uv": [0, 0, 1, 8], "texture": "#2"},
+				"up": {"uv": [0, 0, 1, 1.5], "texture": "#2"},
+				"down": {"uv": [0, 0, 1, 8], "texture": "#2"}
+			},
+			"type": "cube"
+		},
+		{
+			"name": "AntennaBase 2",
+			"from": [6, 5, 11.7],
+			"to": [7, 6, 12.7],
+			"faces": {
+				"north": {
+					"uv": [0, 0, 15.97109375, 15.97109375],
+					"texture": "#1"
+				},
+				"east": {
+					"uv": [0, 0, 15.97109375, 15.97109375],
+					"texture": "#1"
+				},
+				"south": {
+					"uv": [0, 0, 15.97109375, 15.97109375],
+					"texture": "#1"
+				},
+				"west": {
+					"uv": [0, 0, 15.97109375, 15.97109375],
+					"texture": "#1"
+				},
+				"up": {
+					"uv": [0, 0, 15.97109375, 15.97109375],
+					"texture": "#1"
+				},
+				"down": {
+					"uv": [0, 0, 15.97109375, 15.97109375],
+					"texture": "#1"
+				}
+			},
+			"type": "cube"
+		},
+		{
+			"name": "Antenna 1",
+			"from": [1.62, 7.4, 11.7],
+			"to": [2.62, 15.399999999999999, 12.7],
+			"faces": {
+				"north": {
+					"uv": [0, 0, 1, 7.999999999999998],
+					"texture": "#2"
+				},
+				"east": {
+					"uv": [0, 0, 1, 7.999999999999998],
+					"texture": "#2"
+				},
+				"south": {
+					"uv": [0, 0, 1, 7.999999999999998],
+					"texture": "#2"
+				},
+				"west": {
+					"uv": [0, 0, 1, 7.999999999999998],
+					"texture": "#2"
+				},
+				"up": {"uv": [0, 0, 1, 1], "texture": "#2"},
+				"down": {
+					"uv": [0, 0, 1, 7.999999999999998],
+					"texture": "#2"
+				}
+			},
+			"rotation": {
+				"origin": [6.619999999999999, 10.4, 8],
+				"axis": "z",
+				"angle": 22.5
+			},
+			"type": "cube"
+		},
+		{
+			"name": "AntennaBase 1",
+			"from": [2, 6.5, 11.7],
+			"to": [3, 7.5, 12.7],
+			"faces": {
+				"north": {
+					"uv": [0, 0, 15.97109375, 15.97109375],
+					"texture": "#1"
+				},
+				"east": {
+					"uv": [0, 0, 15.97109375, 15.97109375],
+					"texture": "#1"
+				},
+				"south": {
+					"uv": [0, 0, 15.97109375, 15.97109375],
+					"texture": "#1"
+				},
+				"west": {
+					"uv": [0, 0, 15.97109375, 15.97109375],
+					"texture": "#1"
+				},
+				"up": {
+					"uv": [0, 0, 15.97109375, 15.97109375],
+					"texture": "#1"
+				},
+				"down": {
+					"uv": [0, 0, 15.97109375, 15.97109375],
+					"texture": "#1"
+				}
+			},
+			"rotation": {
+				"origin": [7, 9.5, 8],
+				"axis": "z",
+				"angle": 22.5
+			},
+			"type": "cube"
+		},
+		{
+			"name": "Stand",
+			"from": [3.5, 0, 11],
+			"to": [12.5, 4, 11.5],
+			"faces": {
+				"north": {"uv": [0, 0, 9, 4], "texture": "#2"},
+				"east": {"uv": [0, 0, 0.5, 4], "texture": "#2"},
+				"south": {"uv": [0, 0, 9, 4], "texture": "#2"},
+				"west": {"uv": [0, 0, 0.5, 4], "texture": "#2"},
+				"up": {"uv": [0, 0, 9, 0.5], "texture": "#missing"},
+				"down": {"uv": [0, 0, 9, 0.5], "texture": "#2"}
+			},
+			"type": "cube"
+		},
+		{
+			"name": "Base",
+			"from": [1.9000000000000004, 0, 1],
+			"to": [14.1, 2, 5],
+			"faces": {
+				"north": {"uv": [0, 0, 12.2, 2], "texture": "#2"},
+				"east": {"uv": [0, 0, 15.7, 8.5], "texture": "#2"},
+				"south": {"uv": [0, 0, 12.2, 2], "texture": "#2"},
+				"west": {"uv": [0, 0, 15.7, 8.5], "texture": "#2"},
+				"up": {"uv": [0, 0, 12.2, 2], "texture": "#2"},
+				"down": {"uv": [0, 0, 12.2, 2], "texture": "#2"}
+			},
+			"type": "cube"
+		},
+		{
+			"name": "Display-Outcrop",
+			"from": [
+				2.4000000000000004,
+				3.7,
+				1.6999999999999993
+			],
+			"to": [4.4, 4.7, 9.7],
+			"faces": {
+				"north": {
+					"uv": [0, 0, 2, 1],
+					"rotation": 180,
+					"texture": "#1"
+				},
+				"east": {
+					"uv": [0, 0, 1, 8],
+					"rotation": 270,
+					"texture": "#1"
+				},
+				"south": {"uv": [0, 0, 2, 1], "texture": "#1"},
+				"west": {
+					"uv": [0, 0, 1, 8],
+					"rotation": 90,
+					"texture": "#1"
+				},
+				"up": {
+					"uv": [0, 0, 15.98046875, 15.99921875],
+					"rotation": 180,
+					"texture": "#1"
+				},
+				"down": {"uv": [0, 0, 2, 8], "texture": "#missing"}
+			},
+			"rotation": {
+				"origin": [8, 5.3, 7],
+				"axis": "x",
+				"angle": -22.5
+			},
+			"type": "cube"
+		},
+		{
+			"name": "Display",
+			"from": [2, 2.3, 1],
+			"to": [14, 4.3, 12],
+			"faces": {
+				"north": {
+					"uv": [0, 0, 12, 2],
+					"rotation": 180,
+					"texture": "#missing"
+				},
+				"east": {
+					"uv": [0.64453125, 0, 2.64453125, 11],
+					"rotation": 270,
+					"texture": "#0"
+				},
+				"south": {"uv": [0, 0, 12, 2], "texture": "#0"},
+				"west": {
+					"uv": [
+						0.9890625,
+						0.12890625,
+						2.9890625,
+						11.12890625
+					],
+					"rotation": 90,
+					"texture": "#0"
+				},
+				"up": {
+					"uv": [0.515625, 0, 12.515625, 11],
+					"rotation": 180,
+					"texture": "#0"
+				},
+				"down": {
+					"uv": [0.7734375, 0.34375, 12.7734375, 11.34375],
+					"texture": "#0"
+				}
+			},
+			"rotation": {
+				"origin": [8, 4.3, 7],
+				"axis": "x",
+				"angle": -22.5
+			},
+			"type": "cube"
+		}
+	],
+	"groups": [
+		{
+			"name": "Antennas",
+			"isOpen": true,
+			"display": {"visibility": true, "autouv": true},
+			"children": [0, 1, 2, 3, 4, 5, 6, 7]
+		},
+		{
+			"name": "Basis",
+			"isOpen": true,
+			"display": {"visibility": true, "autouv": true},
+			"children": [8, 9, 10, 11]
+		}
+	]
+}

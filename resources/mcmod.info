@@ -1,0 +1,16 @@
+[
+{
+  "modid": "vmjcm",
+  "name": "VMJ's ComputerMod",
+  "description": "PorefilioVMJ's Computer Mod",
+  "version": "1.0",
+  "mcversion": "1.11.2",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["PorfilioVMJ"],
+  "credits": "MrCrayfish for giving me this idea",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
