@@ -8,21 +8,24 @@ import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.gui.GuiTextField;
 import net.minecraftforge.fml.client.config.GuiButtonExt;
+import net.vmjforums.computer.tileentity.ExtraStorage;
 
 public class GuiRouterScreen extends GuiScreen{
 	
 	private GuiButton exit;
 	private GuiButtonExt enterPw;
 	private GuiTextField router2PosInput;
+	ExtraStorage storage;
 	
 	public static int x, y, z;
 	
 	ArrayList<String> connectedIps = new ArrayList<String>();
 	
-	public GuiRouterScreen(int lposX, int lposY, int lposZ){
+	public GuiRouterScreen(int lposX, int lposY, int lposZ, ExtraStorage storageModule1){
 		this.x = lposX;
 		this.y = lposY;
 		this.z = lposZ;
+		storage = storageModule1;
 	}
 	
 	@Override
@@ -36,11 +39,15 @@ public class GuiRouterScreen extends GuiScreen{
 	
 	@Override
 	public void initGui() {
+		System.out.println("Router is located at "+x+"."+y+"."+z);
 		this.buttonList.add(this.exit = new GuiButton(0, 10, 10, 10, 10, "X"));
 		this.buttonList.add(this.exit = new GuiButtonExt(1, this.width/4+55, 43, 60, 25, "ENTER"));
         this.router2PosInput = new GuiTextField(1, this.fontRendererObj, this.width/4-80, 45, 130, 20);
         router2PosInput.setMaxStringLength(23);
         router2PosInput.setText("Device Router");
+		if(storage.getPerDeviceRouter(x+"."+y+"."+z) != null){
+			this.drawCenteredString(fontRendererObj, "Connected: "+storage.getPerDeviceRouter(x+"."+y+"."+z), this.width/4, 45, 0xFFFFFF);
+		}
         this.router2PosInput.setFocused(true);
 		super.initGui();
 	}

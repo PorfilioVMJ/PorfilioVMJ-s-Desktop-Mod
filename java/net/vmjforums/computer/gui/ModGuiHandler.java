@@ -24,10 +24,14 @@ public class ModGuiHandler implements IGuiHandler{
 
     @Override
     public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
+    	int bx = (int) (player.getLookVec().xCoord*50D);
+    	int by = (int) (player.posY+player.getLookVec().yCoord*50D);
+    	int bz = (int) (player.posZ+player.getLookVec().zCoord*50D);
+    	
         if (ID == OS_GUI)
         	return new GuiOSTileEntity(storageModule1);
         else if(ID == ROUTER_GUI)
-        	return new GuiRouterScreen(x,y,z);
+        	return new GuiRouterScreen(bx,by,bz, storageModule1);
         
         return null;
     }
