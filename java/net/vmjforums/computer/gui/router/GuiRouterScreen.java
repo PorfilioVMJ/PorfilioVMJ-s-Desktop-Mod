@@ -13,7 +13,7 @@ public class GuiRouterScreen extends GuiScreen{
 	
 	private GuiButton exit;
 	private GuiButtonExt enterPw;
-	private GuiTextField passwordInput;
+	private GuiTextField router2PosInput;
 	
 	public static int x, y, z;
 	
@@ -30,7 +30,7 @@ public class GuiRouterScreen extends GuiScreen{
 		this.drawDefaultBackground();
 		this.drawCenteredString(fontRendererObj, "Router", this.width/2, 10, 0xFFFFFF);
 		this.drawCenteredString(fontRendererObj, "Connection Address: "+x+"."+y+"."+z, this.width/4, 30, 0xFFFFFF);
-		this.passwordInput.drawTextBox();
+		this.router2PosInput.drawTextBox();
 		super.drawScreen(mouseX, mouseY, partialTicks);
 	}
 	
@@ -38,23 +38,23 @@ public class GuiRouterScreen extends GuiScreen{
 	public void initGui() {
 		this.buttonList.add(this.exit = new GuiButton(0, 10, 10, 10, 10, "X"));
 		this.buttonList.add(this.exit = new GuiButtonExt(1, this.width/4+55, 43, 60, 25, "ENTER"));
-        this.passwordInput = new GuiTextField(1, this.fontRendererObj, this.width/4-80, 45, 130, 20);
-        passwordInput.setMaxStringLength(23);
-        passwordInput.setText("Password");
-        this.passwordInput.setFocused(true);
+        this.router2PosInput = new GuiTextField(1, this.fontRendererObj, this.width/4-80, 45, 130, 20);
+        router2PosInput.setMaxStringLength(23);
+        router2PosInput.setText("Device Router");
+        this.router2PosInput.setFocused(true);
 		super.initGui();
 	}
 	
 	@Override
 	public void updateScreen() {
 		super.updateScreen();
-		this.passwordInput.updateCursorCounter();
+		this.router2PosInput.updateCursorCounter();
 	}
 	
 	@Override
 	protected void keyTyped(char typedChar, int keyCode) throws IOException {
 		super.keyTyped(typedChar, keyCode);
-		this.passwordInput.textboxKeyTyped(typedChar, keyCode);
+		this.router2PosInput.textboxKeyTyped(typedChar, keyCode);
 	}
 	
 	protected void mouseClicked(int x, int y, int btn) {
@@ -63,7 +63,7 @@ public class GuiRouterScreen extends GuiScreen{
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-        this.passwordInput.mouseClicked(x, y, btn);
+        this.router2PosInput.mouseClicked(x, y, btn);
     }
 	
 	@Override
