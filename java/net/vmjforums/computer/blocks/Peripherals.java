@@ -22,6 +22,8 @@ public class Peripherals extends Block implements ITileEntityProvider{
 	//x1, y1, z1, x2, y2, z2
 	private static final AxisAlignedBB DEBUG_BOUNDING_BOX = new AxisAlignedBB(0.0625*1, 0, 0.0625*3, 0.0625*15, 0.0625*15, 0.0625*12);
 	
+	public String routerIp = "No Ip";
+	
 	public Peripherals() {
 		super(Material.IRON);
 		setUnlocalizedName(Reference.ComputerBlocks.peripherals.getUnlocalizedName());
@@ -42,7 +44,7 @@ public class Peripherals extends Block implements ITileEntityProvider{
 	}
 	@Override
 	public TileEntity createNewTileEntity(World worldIn, int meta) {
-		return new TileEntityPeripherals();
+		return new TileEntityPeripherals(routerIp);
 	}
 	
 	@Override

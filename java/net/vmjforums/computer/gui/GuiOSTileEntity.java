@@ -7,10 +7,13 @@ import net.minecraft.client.gui.GuiLabel;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.gui.GuiTextField;
 import net.minecraft.client.renderer.GlStateManager;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.client.config.GuiButtonExt;
 import net.vmjforums.computer.Reference;
 import net.vmjforums.computer.gui.os.components.SubBiOS;
+import net.vmjforums.computer.tileentity.ExtraStorage;
+import net.vmjforums.computer.tileentity.TileEntityPeripherals;
 
 public class GuiOSTileEntity extends GuiScreen{
 	
@@ -21,8 +24,14 @@ public class GuiOSTileEntity extends GuiScreen{
 	SubBiOS bios = new SubBiOS();
 	public int pcs = 0;
 	
+	ExtraStorage storage;
+	
 	ResourceLocation background1 = new ResourceLocation("vmjcm:gui/textures/background1.png");
 	private static final ResourceLocation BG_TEXTURE = new ResourceLocation(Reference.modid, "gui/textures/background1.png");
+	
+    public GuiOSTileEntity(ExtraStorage storage){
+    	this.storage = storage;
+	}
 	
 	@Override
 	public void drawScreen(int mouseX, int mouseY, float partialTicks) {
@@ -39,7 +48,8 @@ public class GuiOSTileEntity extends GuiScreen{
 		this.buttonList.add(this.enterIp = new GuiButtonExt(2, 145, this.height-32, 60, 24, "ENTER"));
 		this.routerIp = new GuiTextField(2, this.fontRendererObj, 10, this.height-30, 130, 20);
 		routerIp.setMaxStringLength(16);
-		routerIp.setText("Router's Ip");
+		routerIp.setText(storage.getRouterIp());
+		System.out.println(TileEntityPeripherals.getRouterIp());
         this.routerIp.setFocused(true);
 	}
 	
@@ -88,7 +98,10 @@ public class GuiOSTileEntity extends GuiScreen{
 	        this.routerIp.mouseClicked(x, y, btn);
 	        if(x>=enterIp.xPosition && x<enterIp.xPosition+enterIp.width) {
 	        	if(y>=enterIp.yPosition&&y<=enterIp.yPosition+enterIp.height) {
-		        	System.out.println("Text Entered");
+	        		storage.setRouterIp(routerIp.getText());
+	        		//DEPRECATED (Does not update, Code is incorrect) TileEntityPeripherals.setRouterIp(routerIp.getText());
+	        		
+		        	System.out.println("New Router = "+routerIp.getText());
 	        	}
 	        }
 	 }
@@ -101,6 +114,8 @@ public class GuiOSTileEntity extends GuiScreen{
 		}
         this.routerIp.textboxKeyTyped(par1, par2);
     }
+	
+	
 	
 	@Override
 	public boolean doesGuiPauseGame() {
