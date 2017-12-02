@@ -14,6 +14,7 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.vmjforums.computer.ComputerMod;
 import net.vmjforums.computer.Reference;
+import net.vmjforums.computer.gui.GuiOSTileEntity;
 import net.vmjforums.computer.tileentity.TileEntityPeripherals;
 
 public class Peripherals extends Block implements ITileEntityProvider{
@@ -23,6 +24,8 @@ public class Peripherals extends Block implements ITileEntityProvider{
 	private static final AxisAlignedBB DEBUG_BOUNDING_BOX = new AxisAlignedBB(0.0625*1, 0, 0.0625*3, 0.0625*15, 0.0625*15, 0.0625*12);
 	
 	public String routerIp = "No Ip";
+	//TESTING ONLY
+	String deviceName = "dev1";
 	
 	public Peripherals() {
 		super(Material.IRON);
@@ -52,6 +55,7 @@ public class Peripherals extends Block implements ITileEntityProvider{
 			EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
 		
         if (worldIn.isRemote) {
+        	GuiOSTileEntity.deviceName = deviceName;
             playerIn.openGui(ComputerMod.instance, 0, worldIn, (int) playerIn.posX, (int) playerIn.posY, (int) playerIn.posZ);
         }
 		

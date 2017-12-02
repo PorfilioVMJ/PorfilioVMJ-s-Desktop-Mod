@@ -25,6 +25,7 @@ public class GuiOSTileEntity extends GuiScreen{
 	public int pcs = 0;
 	
 	ExtraStorage storage;
+	public static String deviceName;
 	
 	ResourceLocation background1 = new ResourceLocation("vmjcm:gui/textures/background1.png");
 	private static final ResourceLocation BG_TEXTURE = new ResourceLocation(Reference.modid, "gui/textures/background1.png");
@@ -48,7 +49,11 @@ public class GuiOSTileEntity extends GuiScreen{
 		this.buttonList.add(this.enterIp = new GuiButtonExt(2, 145, this.height-32, 60, 24, "ENTER"));
 		this.routerIp = new GuiTextField(2, this.fontRendererObj, 10, this.height-30, 130, 20);
 		routerIp.setMaxStringLength(16);
-		routerIp.setText(storage.getRouterIp());
+		if(storage.getPerDeviceRouter(deviceName)!=null) {
+			routerIp.setText(storage.getPerDeviceRouter(deviceName));
+		}else {
+			routerIp.setText("No Router");
+		}
 		System.out.println(TileEntityPeripherals.getRouterIp());
         this.routerIp.setFocused(true);
 	}
@@ -98,7 +103,7 @@ public class GuiOSTileEntity extends GuiScreen{
 	        this.routerIp.mouseClicked(x, y, btn);
 	        if(x>=enterIp.xPosition && x<enterIp.xPosition+enterIp.width) {
 	        	if(y>=enterIp.yPosition&&y<=enterIp.yPosition+enterIp.height) {
-	        		storage.setRouterIp(routerIp.getText());
+	        		storage.setRouterIp(deviceName, routerIp.getText());
 	        		//DEPRECATED (Does not update, Code is incorrect) TileEntityPeripherals.setRouterIp(routerIp.getText());
 	        		
 		        	System.out.println("New Router = "+routerIp.getText());
